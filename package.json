@@ -1,0 +1,27 @@
+{
+  "name": "transit-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon dist/app.js",
+    "watch": "parcel src/app.ts -p 3000",
+    "build": "parcel build src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jichoup/transit-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jichoup/transit-bot/issues"
+  },
+  "homepage": "https://github.com/jichoup/transit-bot#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.0",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.4.5"
+  }
+}
