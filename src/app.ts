@@ -11,10 +11,11 @@ client.on('ready', async () => {
     const time = dom.window.document.querySelector('#route01 > div > div:last-child > ul > li')!.innerHTML;
     Array.from(client.guilds.values())
       .map(v => v.id)
-      .forEach(_id => {
+      .forEach(async _id => {
         const channel = Array.from(client.guilds.get(_id)!.channels.values()).find(v => v.name === 'bot');
         if (channel && channel.type === 'text') {
-          (channel as TextChannel).send(`今から帰ります\n到着予想時刻は${time}です`);
+          await (channel as TextChannel).send(`今から帰ります\n到着予想時刻は${time}です`);
+          process.exit();
         }
       });
   });
