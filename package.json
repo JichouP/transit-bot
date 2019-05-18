@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon dist/app.js",
-    "watch": "parcel src/app.ts -p 3000",
-    "build": "parcel build src/app.ts"
+    "watch": "parcel src/app.ts -p 3000 --target node",
+    "build": "parcel build src/app.ts --target node"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,17 @@
   },
   "homepage": "https://github.com/jichoup/transit-bot#readme",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/jsdom": "^12.2.3",
+    "@types/request": "^2.48.1",
     "nodemon": "^1.19.0",
     "parcel-bundler": "^1.12.3",
     "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.0",
+    "dotenv": "^8.0.0",
+    "jsdom": "^15.1.0",
+    "request": "^2.88.0"
   }
 }
